@@ -1,222 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Computer Encyclopedia</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fdfdfd;
-    color: #111;
-  }
-  header {
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
-  }
-  nav {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #1a73e8;
-    font-weight: bold;
-  }
-  h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 0.2em;
-  }
-  h2 {
-    font-size: 1.5em;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    color: #333;
-  }
-  .reference {
-    margin-top: 2em;
-    font-size: 0.9em;
-    color: #555;
-  }
-  .section {
-    margin-bottom: 2em;
-  }
-  ul, ol {
-    margin-left: 20px;
-  }
-
-  /* Sliding gallery */
-  .gallery {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-    padding-bottom: 10px;
-  }
-  .gallery img {
-    flex: 0 0 auto;
-    width: 200px;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  .gallery::-webkit-scrollbar {
-    height: 8px;
-  }
-  .gallery::-webkit-scrollbar-thumb {
-    background-color: #aaa;
-    border-radius: 4px;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComputerVerse - Computer Encyclopedia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Computer Encyclopedia</h1>
+<header class="header">
+    <h1>ComputerVerse</h1>
+    <p>The Ultimate Computer Encyclopedia</p>
 </header>
 
-<nav>
-  <a href="#history">Computer History</a>
-  <a href="#networking">Networking</a>
-  <a href="#types">Computer Types</a>
-  <a href="#input">Input Devices</a>
-  <a href="#storage">Storage Devices</a>
-  <a href="#core">Core Computer Parts</a>
-</nav>
-
-<!-- Computer History -->
-<div class="topic" id="history">
-  <h1>Computer History</h1>
-  <p>The history of computers dates back to ancient times with mechanical counting devices. Modern computers have evolved through several generations, from vacuum tubes to transistors, integrated circuits, and microprocessors, becoming faster, smaller, and more powerful.</p>
-  
-  <h2>Early Computers</h2>
-  <p>Early computing machines like the abacus, mechanical calculators, and punch-card machines laid the foundation for modern computers.</p>
-  <div class="gallery">
-    <img src="old-computer.jpg" alt="Old computer">
-    <img src="floppy-disk.jpg" alt="Floppy disk">
-    <img src="old-laptop.jpg" alt="Old laptop">
-    <img src="vintage-computer.jpg" alt="Vintage computer">
-    <img src="retro-computer.jpg" alt="Retro computer">
-  </div>
-
-  <div class="reference">
-    <p>Reference: <a href="https://www.britannica.com/technology/computer" target="_blank">https://www.britannica.com/technology/computer</a></p>
-  </div>
+<div class="search-container">
+    <input type="text" id="search" placeholder="Search computer topics..." onkeyup="searchContent()">
 </div>
 
-<!-- Networking -->
-<div class="topic" id="networking">
-  <h1>Networking</h1>
-  <p>Computer networking involves connecting multiple devices to share resources, data, and communication. Networks can be small (LAN) or large (WAN, internet).</p>
+<main>
+    <section>
+        <h2>Core Computer Parts</h2>
+        <div class="container">
+            <div class="card">
+                <img src="cpu.jpg" alt="CPU">
+                <h3>CPU</h3>
+                <p>The central processing unit is the brain of the computer.</p>
+            </div>
+            <div class="card">
+                <img src="ram.jpg" alt="RAM">
+                <h3>RAM</h3>
+                <p>RAM stores temporary data for programs.</p>
+            </div>
+            <div class="card">
+                <img src="motherboard.jpg" alt="Motherboard">
+                <h3>Motherboard</h3>
+                <p>The motherboard connects all computer components.</p>
+            </div>
+            <div class="card">
+                <img src="gpu.jpg" alt="GPU">
+                <h3>GPU</h3>
+                <p>The graphics processing unit renders images and video.</p>
+            </div>
+        </div>
+    </section>
 
-  <h2>Key Components</h2>
-  <ul>
-    <li>Router: Directs data traffic between networks.</li>
-    <li>Switch: Connects multiple devices in a LAN.</li>
-    <li>Ethernet Cable: Wired medium for data transfer.</li>
-    <li>Servers: Provide centralized resources to users.</li>
-    <li>Data Centers: Store large amounts of data and host services.</li>
-  </ul>
-  <div class="gallery">
-    <img src="router.jpg" alt="Router">
-    <img src="ethernet-cable.jpg" alt="Ethernet cable">
-    <img src="network-switch.jpg" alt="Network switch">
-    <img src="server.jpg" alt="Server">
-    <img src="data-center.jpg" alt="Data center">
-  </div>
+    <section>
+        <h2>Storage Devices</h2>
+        <div class="container">
+            <div class="card">
+                <img src="ssd.jpg" alt="SSD">
+                <h3>SSD</h3>
+                <p>Solid State Drive for fast data access.</p>
+            </div>
+            <div class="card">
+                <img src="harddrive.jpg" alt="Hard Drive">
+                <h3>Hard Drive</h3>
+                <p>Traditional spinning disk for mass storage.</p>
+            </div>
+        </div>
+    </section>
 
-  <div class="reference">
-    <p>Reference: <a href="https://www.britannica.com/technology/computer-network" target="_blank">https://www.britannica.com/technology/computer-network</a></p>
-  </div>
-</div>
+    <section>
+        <h2>Networking</h2>
+        <div class="container">
+            <div class="card">
+                <img src="router.jpg" alt="Router">
+                <h3>Router</h3>
+                <p>Directs data traffic between networks.</p>
+            </div>
+            <div class="card">
+                <img src="server.jpg" alt="Server">
+                <h3>Server</h3>
+                <p>Provides centralized resources to users.</p>
+            </div>
+        </div>
+    </section>
+</main>
 
-<!-- Computer Types -->
-<div class="topic" id="types">
-  <h1>Computer Types</h1>
-  <p>Computers come in various types, each designed for specific tasks and users. They range from personal devices to powerful workstations.</p>
-
-  <h2>Personal Computers</h2>
-  <p>Desktops and laptops are the most common types, used for everyday computing tasks.</p>
-  <div class="gallery">
-    <img src="desktop-computer.jpg" alt="Desktop computer">
-    <img src="laptop.jpg" alt="Laptop">
-    <img src="gaming-pc.jpg" alt="Gaming PC">
-    <img src="mini-pc.jpg" alt="Mini PC">
-    <img src="workstation.jpg" alt="Workstation">
-    <img src="wifi-router.jpg" alt="WiFi router">
-  </div>
-
-  <div class="reference">
-    <p>Reference: <a href="https://www.britannica.com/technology/computer/Personal-computer" target="_blank">https://www.britannica.com/technology/computer/Personal-computer</a></p>
-  </div>
-</div>
-
-<!-- Input Devices -->
-<div class="topic" id="input">
-  <h1>Input Devices</h1>
-  <p>Input devices allow users to interact with computers by providing data or control signals.</p>
-
-  <h2>Common Input Devices</h2>
-  <div class="gallery">
-    <img src="keyboard.jpg" alt="Keyboard">
-    <img src="mouse.jpg" alt="Mouse">
-    <img src="gaming-mouse.jpg" alt="Gaming Mouse">
-    <img src="mechanical-keyboard.jpg" alt="Mechanical Keyboard">
-    <img src="touchpad.jpg" alt="Touchpad">
-  </div>
-
-  <div class="reference">
-    <p>Reference: <a href="https://www.britannica.com/technology/input-device" target="_blank">https://www.britannica.com/technology/input-device</a></p>
-  </div>
-</div>
-
-<!-- Storage Devices -->
-<div class="topic" id="storage">
-  <h1>Storage Devices</h1>
-  <p>Storage devices store data permanently or temporarily. They are essential for saving operating systems, applications, and user files.</p>
-
-  <h2>Types of Storage</h2>
-  <div class="gallery">
-    <img src="ssd.jpg" alt="SSD">
-    <img src="harddrive.jpg" alt="Hard Drive">
-    <img src="nvme.jpg" alt="NVMe">
-    <img src="external-drive.jpg" alt="External Drive">
-    <img src="server-storage.jpg" alt="Server Storage">
-  </div>
-
-  <div class="reference">
-    <p>Reference: <a href="https://www.britannica.com/technology/computer-storage" target="_blank">https://www.britannica.com/technology/computer-storage</a></p>
-  </div>
-</div>
-
-<!-- Core Computer Parts -->
-<div class="topic" id="core">
-  <h1>Core Computer Parts</h1>
-  <p>The core parts of a computer work together to process, store, and display information.</p>
-
-  <h2>Key Components</h2>
-  <div class="gallery">
-    <img src="cpu.jpg" alt="CPU">
-    <img src="ram.jpg" alt="RAM">
-    <img src="motherboard.jpg" alt="Motherboard">
-    <img src="gpu.jpg" alt="GPU">
-    <img src="power-supply.jpg" alt="Power Supply">
-    <img src="cooling-fan.jpg" alt="Cooling Fan">
-    <img src="heat-sink.jpg" alt="Heat Sink">
-  </div>
-
-  <div class="reference">
-    <p>Reference: <a href="https://www.britannica.com/technology/computer/Computer-components" target="_blank">https://www.britannica.com/technology/computer/Computer-components</a></p>
-  </div>
-</div>
-
+<script src="script.js"></script>
 </body>
-     </html>
+                  </html>
