@@ -1,139 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ComputerVerse - Computer Encyclopedia</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ComputerVerse - Computer Encyclopedia</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fdfdfd;
+    color: #111;
+  }
+  header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 20px;
+  }
+  nav {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+  }
+  h1 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.2em;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+  }
+  .reference {
+    margin-top: 2em;
+    font-size: 0.9em;
+    color: #555;
+  }
+  .section {
+    margin-bottom: 2em;
+  }
+  ul, ol {
+    margin-left: 20px;
+  }
+
+  /* Sliding gallery */
+  .gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 10px;
+  }
+  .gallery img {
+    flex: 0 0 auto;
+    width: 200px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .gallery::-webkit-scrollbar {
+    height: 8px;
+  }
+  .gallery::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 4px;
+  }
+</style>
 </head>
 <body>
 
-<header class="header">
-    <h1>ComputerVerse</h1>
-    <p>The Ultimate Digital Encyclopedia</p>
+<header>
+  <h1>ComputerVerse</h1>
+  <p>The Computer Encyclopedia</p>
 </header>
 
-<div class="search-container">
-    <input type="text" id="search" placeholder="Search topics (e.g. CPU, SSD, History)..." onkeyup="searchContent()">
+<nav>
+  <a href="#history">Computer History</a>
+  <a href="#networking">Networking</a>
+  <a href="#types">Computer Types</a>
+  <a href="#input">Input Devices</a>
+  <a href="#storage">Storage Devices</a>
+  <a href="#core">Core Computer Parts</a>
+</nav>
+
+<!-- Computer History -->
+<div class="topic" id="history">
+  <h1>Computer History</h1>
+  <p>The history of computers spans from early mechanical devices to modern high-speed digital systems. This evolution includes desktops, laptops, and portable computing devices.</p>
+
+  <div class="gallery">
+    <img src="old-computer.png" alt="Old Computer">
+    <img src="retro.png" alt="Vintage Computer">
+  </div>
+
+  <div class="reference">
+    <p>Reference: <a href="https://www.britannica.com/technology/computer" target="_blank">https://www.britannica.com/technology/computer</a></p>
+  </div>
 </div>
 
-<main>
-    <section>
-        <h2>Computer History</h2>
-        <div class="container">
-            <div class="card">
-                <img src="old-computer.jpg" alt="Old Computer">
-                <h3>Old Computer</h3>
-                <p>Early computing machines that filled entire rooms.</p>
-            </div>
-            <div class="card">
-                <img src="floppy-disk.jpg" alt="Floppy Disk">
-                <h3>Floppy Disk</h3>
-                <p>A legacy magnetic storage medium used in the 80s and 90s.</p>
-            </div>
-            <div class="card">
-                <img src="old-laptop.jpg" alt="Old Laptop">
-                <h3>Old Laptop</h3>
-                <p>The first portable computers, much heavier than today's versions.</p>
-            </div>
-            <div class="card">
-                <img src="vintage-computer.jpg" alt="Vintage Computer">
-                <h3>Vintage Computer</h3>
-                <p>Classic personal computers from the early era of home computing.</p>
-            </div>
-        </div>
-    </section>
+<!-- Networking -->
+<div class="topic" id="networking">
+  <h1>Networking</h1>
+  <p>Networking connects computers and devices to share data and resources. Networks range from home LANs to global Internet systems.</p>
 
-    <section>
-        <h2>Core Computer Parts</h2>
-        <div class="container">
-            <div class="card">
-                <img src="cpu.jpg" alt="CPU">
-                <h3>CPU</h3>
-                <p>The central processing unit—the "brain" of the computer.</p>
-            </div>
-            <div class="card">
-                <img src="ram.jpg" alt="RAM">
-                <h3>RAM</h3>
-                <p>Short-term memory for active programs and data.</p>
-            </div>
-            <div class="card">
-                <img src="motherboard.jpg" alt="Motherboard">
-                <h3>Motherboard</h3>
-                <p>The main circuit board that connects everything together.</p>
-            </div>
-            <div class="card">
-                <img src="gpu.jpg" alt="GPU">
-                <h3>GPU</h3>
-                <p>Handles graphics, video rendering, and gaming performance.</p>
-            </div>
-        </div>
-    </section>
+  <div class="gallery">
+    <img src="router.png" alt="Router">
+    <img src="network-switch.png" alt="Network Switch">
+    <img src="ethernet-cable.png" alt="Ethernet Cable">
+    <img src="server.png" alt="Server">
+    <img src="data-center.png" alt="Data Center">
+  </div>
 
-    <section>
-        <h2>Storage Devices</h2>
-        <div class="container">
-            <div class="card">
-                <img src="ssd.jpg" alt="SSD">
-                <h3>SSD</h3>
-                <p>Fast, modern storage with no moving parts.</p>
-            </div>
-            <div class="card">
-                <img src="harddrive.jpg" alt="Hard Drive">
-                <h3>Hard Drive (HDD)</h3>
-                <p>High-capacity storage using spinning magnetic platters.</p>
-            </div>
-            <div class="card">
-                <img src="nvme.jpg" alt="NVMe">
-                <h3>NVMe</h3>
-                <p>Ultra-fast storage that plugs directly into the motherboard.</p>
-            </div>
-        </div>
-    </section>
+  <div class="reference">
+    <p>Reference: <a href="https://www.britannica.com/technology/computer-network" target="_blank">https://www.britannica.com/technology/computer-network</a></p>
+  </div>
+</div>
 
-    <section>
-        <h2>Networking</h2>
-        <div class="container">
-            <div class="card">
-                <img src="router.jpg" alt="Router">
-                <h3>Router</h3>
-                <p>Connects your local network to the internet.</p>
-            </div>
-            <div class="card">
-                <img src="server.jpg" alt="Server">
-                <h3>Server</h3>
-                <p>A powerful computer that provides data to other computers.</p>
-            </div>
-            <div class="card">
-                <img src="ethernet-cable.jpg" alt="Ethernet">
-                <h3>Ethernet Cable</h3>
-                <p>Used for high-speed wired internet connections.</p>
-            </div>
-        </div>
-    </section>
+<!-- Computer Types -->
+<div class="topic" id="types">
+  <h1>Computer Types</h1>
+  <p>Computers come in many types including desktops, laptops, gaming PCs, mini PCs, and workstations, each designed for specific tasks and users.</p>
 
-    <section>
-        <h2>Input Devices</h2>
-        <div class="container">
-            <div class="card">
-                <img src="keyboard.jpg" alt="Keyboard">
-                <h3>Keyboard</h3>
-                <p>Used to input text and commands into the computer.</p>
-            </div>
-            <div class="card">
-                <img src="mouse.jpg" alt="Mouse">
-                <h3>Mouse</h3>
-                <p>A pointing device used to interact with the screen.</p>
-            </div>
-        </div>
-    </section>
+  <div class="gallery">
+    <img src="desktop-computer.png" alt="Desktop Computer">
+    <img src="laptop.png" alt="Laptop">
+    <img src="gaming-pc.png" alt="Gaming PC">
+    <img src="mini-pc.png" alt="Mini PC">
+    <img src="workstation.png" alt="Workstation">
+  </div>
 
-</main>
+  <div class="reference">
+    <p>Reference: <a href="https://www.britannica.com/technology/computer/Personal-computer" target="_blank">https://www.britannica.com/technology/computer/Personal-computer</a></p>
+  </div>
+</div>
 
-<footer>
-    <p>Reference: <a href="https://www.britannica.com/technology/computer" target="_blank">Encyclopædia Britannica</a></p>
-</footer>
+<!-- Input Devices -->
+<div class="topic" id="input">
+  <h1>Input Devices</h1>
+  <p>Input devices allow humans to provide data and commands to computers. Examples include keyboards, mice, and touchpads.</p>
 
-<script src="script.js"></script>
+  <div class="gallery">
+    <img src="keyboard.png" alt="Keyboard">
+    <img src="mouse.png" alt="Mouse">
+    <img src="gaming-mouse.png" alt="Gaming Mouse">
+    <img src="mechanical-keyboard.png" alt="Mechanical Keyboard">
+    <img src="touchpad.png" alt="Touchpad">
+  </div>
+
+  <div class="reference">
+    <p>Reference: <a href="https://www.britannica.com/technology/input-device" target="_blank">https://www.britannica.com/technology/input-device</a></p>
+  </div>
+</div>
+
+<!-- Storage Devices -->
+<div class="topic" id="storage">
+  <h1>Storage Devices</h1>
+  <p>Storage devices save data for temporary or permanent use. Modern computers use SSDs, hard drives, NVMe drives, and external storage.</p>
+
+  <div class="gallery">
+    <img src="ssd.png" alt="SSD">
+    <img src="harddrive.png" alt="Hard Drive">
+    <img src="nvme.png" alt="NVMe">
+    <img src="external-drive.png" alt="External Drive">
+    <img src="server-storage.png" alt="Server Storage">
+  </div>
+
+  <div class="reference">
+    <p>Reference: <a href="https://www.britannica.com/technology/computer-storage" target="_blank">https://www.britannica.com/technology/computer-storage</a></p>
+  </div>
+</div>
+
+<!-- Core Computer Parts -->
+<div class="topic" id="core">
+  <h1>Core Computer Parts</h1>
+  <p>The core parts of a computer include CPU, RAM, motherboard, GPU, power supply, cooling fan, and heat sink. They work together to run programs efficiently.</p>
+
+  <div class="gallery">
+    <img src="cpu.png" alt="CPU">
+    <img src="ram.png" alt="RAM">
+    <img src="motherboard.png" alt="Motherboard">
+    <img src="gpu.png" alt="GPU">
+    <img src="power-supply.png" alt="Power Supply">
+    <img src="cooling-fan.png" alt="Cooling Fan">
+    <img src="heat-sink.png" alt="Heat Sink">
+  </div>
+
+  <div class="reference">
+    <p>Reference: <a href="https://www.britannica.com/technology/computer/Computer-components" target="_blank">https://www.britannica.com/technology/computer/Computer-components</a></p>
+  </div>
+</div>
+
 </body>
 </html>
