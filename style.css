@@ -1,7 +1,27 @@
 body{
 font-family: Arial;
 background:#E6E6FA;
+margin:0;
 text-align:center;
+}
+
+.header{
+background:#9370DB;
+color:white;
+padding:30px;
+margin-bottom:20px;
+}
+
+input{
+padding:12px;
+width:60%;
+margin:20px;
+border-radius:8px;
+border:none;
+}
+
+h2{
+margin-top:40px;
 }
 
 .card{
@@ -9,18 +29,14 @@ background:white;
 width:200px;
 display:inline-block;
 margin:10px;
-padding:10px;
+padding:15px;
 border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-img{
+.card img{
 width:100%;
-border-radius:10px;
-}
-
-input{
-padding:10px;
-width:60%;
-margin:20px;
-}
+height:150px;
+object-fit:cover;
+border-radius:8px;
+  } 
