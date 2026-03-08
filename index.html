@@ -6,9 +6,9 @@
 <title>ComputerVerse - Computer Encyclopedia</title>
 <style>
   body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    max-width: 1000px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.8;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fdfdfd;
@@ -16,62 +16,108 @@
   }
   header {
     text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 2px solid #ccc;
-    margin-bottom: 20px;
+    padding: 40px 0;
+    border-bottom: 3px solid #1a73e8;
+    margin-bottom: 30px;
+    background-color: #f8f9fa;
   }
   nav {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   nav a {
-    margin: 0 10px;
+    margin: 0 12px;
     text-decoration: none;
     color: #1a73e8;
     font-weight: bold;
   }
   h1 {
-    font-size: 2em;
+    font-size: 2.5em;
+    color: #2c3e50;
     margin-bottom: 0.5em;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 0.2em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
   }
+  h2 {
+    color: #1a73e8;
+    margin-top: 30px;
+  }
+
+  /* Text Sections */
+  .main-article {
+    text-align: justify;
+    background: #f1f8ff;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 5px solid #1a73e8;
+  }
+  .item-description {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    min-width: 250px;
+    max-width: 300px;
+    font-size: 0.95em;
+  }
+
   /* Sliding gallery */
   .gallery {
     display: flex;
     overflow-x: auto;
-    gap: 10px;
+    gap: 20px;
     padding-bottom: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+  }
+  .gallery-item {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
   }
   .gallery img {
-    flex: 0 0 auto;
-    width: 200px;
-    height: auto;
+    width: 250px;
+    height: 180px;
+    object-fit: cover;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  .gallery img:hover {
+    transform: scale(1.03);
   }
   .gallery::-webkit-scrollbar {
-    height: 8px;
+    height: 10px;
   }
   .gallery::-webkit-scrollbar-thumb {
-    background-color: #aaa;
-    border-radius: 4px;
+    background-color: #1a73e8;
+    border-radius: 5px;
   }
-  /* Footer Reference Style */
+
   footer {
-    margin-top: 50px;
-    padding: 20px;
-    border-top: 2px solid #ccc;
+    margin-top: 60px;
+    padding: 40px;
+    border-top: 3px solid #ccc;
     background-color: #f9f9f9;
   }
   .ref-list {
-    font-size: 0.9em;
-    color: #555;
+    font-size: 0.95em;
+    color: #333;
   }
   .ref-list a {
     color: #1a73e8;
     word-wrap: break-word;
+    text-decoration: none;
+  }
+  .ref-list a:hover {
+    text-decoration: underline;
   }
 </style>
 </head>
@@ -79,84 +125,206 @@
 
 <header>
   <h1>ComputerVerse</h1>
-  <p>The Computer Encyclopedia</p>
+  <p>Your Comprehensive Digital Encyclopedia</p>
 </header>
 
 <nav>
-  <a href="#history">Computer History</a>
+  <a href="#history">History</a>
   <a href="#networking">Networking</a>
-  <a href="#types">Computer Types</a>
-  <a href="#input">Input Devices</a>
-  <a href="#storage">Storage Devices</a>
-  <a href="#core">Core Computer Parts</a>
+  <a href="#types">Types</a>
+  <a href="#input">Input</a>
+  <a href="#storage">Storage</a>
+  <a href="#core">Core Parts</a>
 </nav>
 
 <div class="topic" id="history">
   <h1>Computer History</h1>
+  <div class="main-article">
+    <p>The history of the computer is a grand narrative of human logic and the relentless pursuit of automation. It began not with silicon chips, but with mechanical tools designed to alleviate the burden of complex calculations. Centuries ago, devices like the abacus provided the first systematic way to process numbers. However, the true conceptual shift occurred in the 1800s with Charles Babbage’s "Analytical Engine." Babbage envisioned a machine that could not only calculate but also store data and execute logic—the core principles of every computer today. His collaborator, Ada Lovelace, wrote the first algorithm for this engine, becoming the world's first programmer. Though the machine was never completed, the dream of a programmable computer was born.</p>
+    <p>The mid-20th century, fueled by the pressures of World War II, birthed the electronic era. Huge machines like ENIAC and Colossus were built to break enemy codes and calculate missile trajectories. These vacuum-tube giants were temperamental and massive, but they proved that electricity could be used for logic. The invention of the transistor in 1947 was the next major turning point, allowing computers to become smaller, faster, and more reliable. By the 1970s, the microprocessor allowed a whole CPU to be placed on a single chip, leading to the Personal Computer (PC) revolution. Companies like Apple and IBM brought computing into the home, transforming it from a specialized tool for scientists into a household appliance for the masses. Today, we look back at vintage and retro computers as the essential ancestors of our modern technology.</p>
+  </div>
+  
   <div class="gallery">
-    <img src="old-computer.png" alt="Old Computer">
-    <img src="vintage-computer.png" alt="Vintage Computer">
-    <img src="retro-computer.png" alt="Retro Computer">
-    <img src="old-laptop.png" alt="Old Laptop">
-    <img src="floppy-disk.png" alt="Floppy Disk">
+    <div class="gallery-item">
+      <img src="old-computer.png" alt="Old Computer">
+      <div class="item-description"><strong>Old Computer:</strong> These 1st-generation machines used vacuum tubes for logic. They were massive, often filling entire rooms, and were used primarily for high-level mathematical calculations by the government and military.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="vintage-computer.png" alt="Vintage Computer">
+      <div class="item-description"><strong>Vintage Computer:</strong> Representing the 1970s and 80s, these were the first PCs to enter homes. Models like the Apple II brought personal programming and gaming to families for the first time.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="retro-computer.png" alt="Retro Computer">
+      <div class="item-description"><strong>Retro Computer:</strong> Often referring to the "beige box" era of the 90s, these systems utilized MS-DOS or early Windows and relied heavily on mechanical hardware and CRT monitors.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="old-laptop.png" alt="Old Laptop">
+      <div class="item-description"><strong>Old Laptop:</strong> Early portable computers were heavy "luggables" with tiny monochrome screens. They proved that computing could be mobile, even if they lacked internal batteries initially.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="Floppy disks.png" alt="Floppy Disk">
+      <div class="item-description"><strong>Floppy Disk:</strong> The king of portable storage in the 80s and 90s. These magnetic disks held only 1.44MB of data and are now the universal icon for "Save."</div>
+    </div>
   </div>
 </div>
 
 <div class="topic" id="networking">
   <h1>Networking</h1>
+  <div class="main-article">
+    <p>Networking is the invisible infrastructure that binds the modern world together. At its simplest, a network is two or more computers connected to share resources or data. However, the reality of modern networking is a colossal, global web of hardware and software that facilitates everything from a simple text message to massive financial transactions. The origins of networking lie in the ARPANET project of the late 1960s, which sought to create a communication system that could survive localized failures. This decentralized approach eventually gave birth to the Internet, a network of networks that has fundamentally changed human society.</p>
+    <p>Modern networking architecture relies on a layered system of protocols and hardware. At the physical layer, data travels through fiber-optic cables under the ocean, copper ethernet wires, and radio waves for WiFi. To manage this traffic, devices like routers and switches act as the "traffic police," ensuring that data packets reach their intended destination without getting lost. This process happens in the blink of an eye, governed by the Transmission Control Protocol/Internet Protocol (TCP/IP). As our world becomes more connected via the Internet of Things (IoT), the role of networking expands from connecting people to connecting appliances, cars, and entire cities, creating a truly smart global ecosystem.</p>
+  </div>
+  
   <div class="gallery">
-    <img src="router.png" alt="Router">
-    <img src="network-switch.png" alt="Network Switch">
-    <img src="ethernet-cable.png" alt="Ethernet Cable">
-    <img src="server.png" alt="Server">
-    <img src="data-center.png" alt="Data Center">
+    <div class="gallery-item">
+      <img src="router.png" alt="Router">
+      <div class="item-description"><strong>Router:</strong> The gateway of your network. It directs data traffic between your local devices and the wider internet, often providing WiFi for wireless connectivity.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="network-switch.png" alt="Network Switch">
+      <div class="item-description"><strong>Network Switch:</strong> Connects multiple devices within a single local network (LAN). It ensures that data sent from one PC goes exactly to the correct recipient device.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="ethernet-cable.png" alt="Ethernet Cable">
+      <div class="item-description"><strong>Ethernet Cable:</strong> A physical wire used for high-speed, stable data transmission. It is preferred over WiFi for gaming and professional tasks due to its low latency.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="server.png" alt="Server">
+      <div class="item-description"><strong>Server:</strong> A high-powered computer designed to host websites, databases, and apps. It stays on 24/7 to "serve" data to client devices globally.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="data-center.png" alt="Data Center">
+      <div class="item-description"><strong>Data Center:</strong> A massive building filled with thousands of servers. These centers are the physical heart of "The Cloud" and power the entire internet infrastructure.</div>
+    </div>
   </div>
 </div>
 
 <div class="topic" id="types">
   <h1>Computer Types</h1>
+  <div class="main-article">
+    <p>Computers have evolved into specialized forms to match the way we live and work. The most common is the Desktop, a stationary machine built for power and customizability. For people on the go, the Laptop combines the screen, keyboard, and battery into one portable unit. However, specialization goes even further. Gamers require Gaming PCs with high-end graphics cards, while professionals like architects use Workstations for 3D modeling. Even our internet devices, like WiFi Routers, are actually specialized computers with their own CPUs and memory. The diversity in computer types ensures that there is a machine designed specifically for every task imaginable.</p>
+  </div>
   <div class="gallery">
-    <img src="desktop-computer.png" alt="Desktop Computer">
-    <img src="laptop.png" alt="Laptop">
-    <img src="gaming-pc.png" alt="Gaming PC">
-    <img src="mini-pc.png" alt="Mini PC">
-    <img src="workstation.png" alt="Workstation">
-    <img src="wifi-router.png" alt="WiFi Router">
+    <div class="gallery-item">
+      <img src="desktop-computer.png" alt="Desktop Computer">
+      <div class="item-description"><strong>Desktop Computer:</strong> Designed for stationary use, these offer high performance and are easy to upgrade with new internal components over time.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="laptop.png" alt="Laptop">
+      <div class="item-description"><strong>Laptop:</strong> A battery-powered, portable PC. It integrates all components into one unit, making it the standard tool for students and modern workers.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="gaming-pc.png" alt="Gaming PC">
+      <div class="item-description"><strong>Gaming PC:</strong> Built with high-performance CPUs and GPUs. They often feature RGB lighting and advanced cooling to run modern games at high settings.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="mini-pc.png" alt="Mini PC">
+      <div class="item-description"><strong>Mini PC:</strong> Small, space-saving units that offer full desktop power in a box the size of a book. Great for office work and home media centers.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="workstation.png" alt="Workstation">
+      <div class="item-description"><strong>Workstation:</strong> A heavy-duty professional PC used for 8K video editing, 3D engineering, and scientific research requiring massive processing power.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="wifi-router.png" alt="WiFi Router">
+      <div class="item-description"><strong>WiFi Router:</strong> A specialized computer dedicated to networking. It manages wireless connections and ensures secure data flow in homes.</div>
+    </div>
   </div>
 </div>
 
 <div class="topic" id="input">
   <h1>Input Devices</h1>
+  <div class="main-article">
+    <p>Input devices are the bridge between human thought and digital action. They allow us to tell the computer what to do. The most basic input tools are the keyboard and mouse. Keyboards allow us to type text, while the mouse lets us navigate the screen visually. Over time, these have become highly specialized. For example, Mechanical Keyboards use individual switches for every key, providing better tactile feedback. Gaming Mice use high-precision sensors to track movement. Without these input devices, we would have no way to interact with software, making them essential for every user.</p>
+  </div>
   <div class="gallery">
-    <img src="keyboard.png" alt="Keyboard">
-    <img src="mouse.png" alt="Mouse">
-    <img src="gaming-mouse.png" alt="Gaming Mouse">
-    <img src="mechanical-keyboard.png" alt="Mechanical Keyboard">
-    <img src="touchpad.png" alt="Touchpad">
+    <div class="gallery-item">
+      <img src="keyboard.png" alt="Keyboard">
+      <div class="item-description"><strong>Keyboard:</strong> The primary tool for text entry. It uses a layout of keys to send character signals and command shortcuts to the computer.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="mouse.png" alt="Mouse">
+      <div class="item-description"><strong>Mouse:</strong> A handheld pointing device that allows users to interact with a graphical user interface through clicking and dragging.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="gaming-mouse.png" alt="Gaming Mouse">
+      <div class="item-description"><strong>Gaming Mouse:</strong> Features high DPI sensors for precision and extra programmable buttons, designed specifically for competitive video gaming.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="mechanical-keyboard.png" alt="Mechanical Keyboard">
+      <div class="item-description"><strong>Mechanical Keyboard:</strong> Uses physical switches under keys for better durability and a satisfying "click" feel preferred by typists and gamers.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="touchpad.png" alt="Touchpad">
+      <div class="item-description"><strong>Touchpad:</strong> A touch-sensitive surface found on laptops that translates finger movement into cursor movement on the screen.</div>
+    </div>
   </div>
 </div>
 
 <div class="topic" id="storage">
   <h1>Storage Devices</h1>
+  <div class="main-article">
+    <p>Storage devices are where your computer keeps all your files—your photos, games, and the operating system itself. Unlike RAM, storage is "non-volatile," meaning it stays there even when you turn off the power. Today, we mostly use SSDs (Solid State Drives) because they are much faster than older Hard Drives. The fastest version is the NVMe, which plugs directly into the motherboard. Choosing the right storage is the difference between a computer that opens apps in 2 seconds and one that takes 2 minutes. As data sizes grow, having reliable and fast storage becomes even more critical.</p>
+  </div>
   <div class="gallery">
-    <img src="ssd.png" alt="SSD">
-    <img src="harddrive.png" alt="Hard Drive">
-    <img src="nvme.png" alt="NVMe">
-    <img src="external-drive.png" alt="External Drive">
-    <img src="server-storage.png" alt="Server Storage">
+    <div class="gallery-item">
+      <img src="ssd.png" alt="SSD">
+      <div class="item-description"><strong>SSD:</strong> Solid State Drives use flash memory with no moving parts. They are much faster and more durable than traditional spinning hard drives.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="harddrive.png" alt="Hard Drive">
+      <div class="item-description"><strong>Hard Drive (HDD):</strong> An older technology using magnetic platters. They offer high storage capacity at a lower price but are slower than SSDs.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="nvme.png" alt="NVMe">
+      <div class="item-description"><strong>NVMe:</strong> The fastest type of SSD that connects via the PCIe slot. It allows for extreme data transfer speeds used in high-end PCs.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="external-drive.png" alt="External Drive">
+      <div class="item-description"><strong>External Drive:</strong> A portable unit connected via USB. Ideal for backing up important data or transferring large files between computers.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="server-storage.png" alt="Server Storage">
+      <div class="item-description"><strong>Server Storage:</strong> High-capacity drive arrays found in data centers, designed to be accessed by many users simultaneously over a network.</div>
+    </div>
   </div>
 </div>
 
 <div class="topic" id="core">
   <h1>Core Computer Parts</h1>
+  <div class="main-article">
+    <p>The core parts of a computer are like the organs of a body. Each has a specific job, and if one fails, the whole system stops. The CPU is the brain, doing all the math. The Motherboard is the nervous system, connecting everything. The RAM is the short-term memory, holding data you are using right now. For visuals, the GPU handles the graphics. Because these parts get very hot, we use Cooling Fans and Heat Sinks to pull heat away and protect the electronics. Building a computer is all about choosing these parts so they work perfectly together.</p>
+  </div>
+  
   <div class="gallery">
-    <img src="cpu.png" alt="CPU">
-    <img src="ram.png" alt="RAM">
-    <img src="motherboard.png" alt="Motherboard">
-    <img src="gpu.png" alt="GPU">
-    <img src="power-supply.png" alt="Power Supply">
-    <img src="cooling-fan.png" alt="Cooling Fan">
-    <img src="heat-sink.png" alt="Heat Sink">
+    <div class="gallery-item">
+      <img src="cpu.png" alt="CPU">
+      <div class="item-description"><strong>CPU:</strong> The Central Processing Unit. It acts as the "brain," executing every instruction and performing the math for every program.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="ram.png" alt="RAM">
+      <div class="item-description"><strong>RAM:</strong> Random Access Memory provides fast, temporary storage for the data the CPU needs right now. More RAM allows better multitasking.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="motherboard.png" alt="Motherboard">
+      <div class="item-description"><strong>Motherboard:</strong> The main circuit board that connects all components, allowing the CPU, RAM, and GPU to communicate with each other.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="gpu.png" alt="GPU">
+      <div class="item-description"><strong>GPU:</strong> The Graphics Processing Unit specialized for rendering images and video. Critical for gaming, video editing, and AI work.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="power-supply.png" alt="Power Supply">
+      <div class="item-description"><strong>Power Supply:</strong> Converts wall outlet electricity into the specific voltages needed by each internal computer component.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="cooling-fan.png" alt="Cooling Fan">
+      <div class="item-description"><strong>Cooling Fan:</strong> Blows air across hot components to dissipate heat, preventing the system from overheating and shutting down.</div>
+    </div>
+    <div class="gallery-item">
+      <img src="heat-sink.png" alt="Heat Sink">
+      <div class="item-description"><strong>Heat Sink:</strong> A metal block that pulls heat away from the CPU. It works with a fan to keep the processor at a safe temperature.</div>
+    </div>
   </div>
 </div>
 
@@ -174,10 +342,4 @@
     
     <p><strong>Image References:</strong></p>
     <ul>
-      <li>All visual assets and diagrams are sourced via <a href="https://www.britannica.com/" target="_blank">Encyclopædia Britannica</a> and related technology archives.</li>
-    </ul>
-  </div>
-</footer>
-
-</body>
-</html>
+      <li>All visual assets and diagrams are sourced via <a href="https://www.britannica.com/" target="_blank">Encyclopædia Britannica</a> and technology archives.</l
