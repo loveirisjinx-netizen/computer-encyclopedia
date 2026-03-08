@@ -1,0 +1,26 @@
+body{
+font-family: Arial;
+background:#E6E6FA;
+text-align:center;
+}
+
+.card{
+background:white;
+width:200px;
+display:inline-block;
+margin:10px;
+padding:10px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+img{
+width:100%;
+border-radius:10px;
+}
+
+input{
+padding:10px;
+width:60%;
+margin:20px;
+}
