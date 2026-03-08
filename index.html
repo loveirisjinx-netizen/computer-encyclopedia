@@ -10,36 +10,62 @@
 
 <header class="header">
     <h1>ComputerVerse</h1>
-    <p>The Ultimate Computer Encyclopedia</p>
+    <p>The Ultimate Digital Encyclopedia</p>
 </header>
 
 <div class="search-container">
-    <input type="text" id="search" placeholder="Search computer topics..." onkeyup="searchContent()">
+    <input type="text" id="search" placeholder="Search topics (e.g. CPU, SSD, History)..." onkeyup="searchContent()">
 </div>
 
 <main>
+    <section>
+        <h2>Computer History</h2>
+        <div class="container">
+            <div class="card">
+                <img src="old-computer.jpg" alt="Old Computer">
+                <h3>Old Computer</h3>
+                <p>Early computing machines that filled entire rooms.</p>
+            </div>
+            <div class="card">
+                <img src="floppy-disk.jpg" alt="Floppy Disk">
+                <h3>Floppy Disk</h3>
+                <p>A legacy magnetic storage medium used in the 80s and 90s.</p>
+            </div>
+            <div class="card">
+                <img src="old-laptop.jpg" alt="Old Laptop">
+                <h3>Old Laptop</h3>
+                <p>The first portable computers, much heavier than today's versions.</p>
+            </div>
+            <div class="card">
+                <img src="vintage-computer.jpg" alt="Vintage Computer">
+                <h3>Vintage Computer</h3>
+                <p>Classic personal computers from the early era of home computing.</p>
+            </div>
+        </div>
+    </section>
+
     <section>
         <h2>Core Computer Parts</h2>
         <div class="container">
             <div class="card">
                 <img src="cpu.jpg" alt="CPU">
                 <h3>CPU</h3>
-                <p>The central processing unit is the brain of the computer.</p>
+                <p>The central processing unit—the "brain" of the computer.</p>
             </div>
             <div class="card">
                 <img src="ram.jpg" alt="RAM">
                 <h3>RAM</h3>
-                <p>RAM stores temporary data for programs.</p>
+                <p>Short-term memory for active programs and data.</p>
             </div>
             <div class="card">
                 <img src="motherboard.jpg" alt="Motherboard">
                 <h3>Motherboard</h3>
-                <p>The motherboard connects all computer components.</p>
+                <p>The main circuit board that connects everything together.</p>
             </div>
             <div class="card">
                 <img src="gpu.jpg" alt="GPU">
                 <h3>GPU</h3>
-                <p>The graphics processing unit renders images and video.</p>
+                <p>Handles graphics, video rendering, and gaming performance.</p>
             </div>
         </div>
     </section>
@@ -50,12 +76,17 @@
             <div class="card">
                 <img src="ssd.jpg" alt="SSD">
                 <h3>SSD</h3>
-                <p>Solid State Drive for fast data access.</p>
+                <p>Fast, modern storage with no moving parts.</p>
             </div>
             <div class="card">
                 <img src="harddrive.jpg" alt="Hard Drive">
-                <h3>Hard Drive</h3>
-                <p>Traditional spinning disk for mass storage.</p>
+                <h3>Hard Drive (HDD)</h3>
+                <p>High-capacity storage using spinning magnetic platters.</p>
+            </div>
+            <div class="card">
+                <img src="nvme.jpg" alt="NVMe">
+                <h3>NVMe</h3>
+                <p>Ultra-fast storage that plugs directly into the motherboard.</p>
             </div>
         </div>
     </section>
@@ -66,17 +97,43 @@
             <div class="card">
                 <img src="router.jpg" alt="Router">
                 <h3>Router</h3>
-                <p>Directs data traffic between networks.</p>
+                <p>Connects your local network to the internet.</p>
             </div>
             <div class="card">
                 <img src="server.jpg" alt="Server">
                 <h3>Server</h3>
-                <p>Provides centralized resources to users.</p>
+                <p>A powerful computer that provides data to other computers.</p>
+            </div>
+            <div class="card">
+                <img src="ethernet-cable.jpg" alt="Ethernet">
+                <h3>Ethernet Cable</h3>
+                <p>Used for high-speed wired internet connections.</p>
             </div>
         </div>
     </section>
+
+    <section>
+        <h2>Input Devices</h2>
+        <div class="container">
+            <div class="card">
+                <img src="keyboard.jpg" alt="Keyboard">
+                <h3>Keyboard</h3>
+                <p>Used to input text and commands into the computer.</p>
+            </div>
+            <div class="card">
+                <img src="mouse.jpg" alt="Mouse">
+                <h3>Mouse</h3>
+                <p>A pointing device used to interact with the screen.</p>
+            </div>
+        </div>
+    </section>
+
 </main>
+
+<footer>
+    <p>Reference: <a href="https://www.britannica.com/technology/computer" target="_blank">Encyclopædia Britannica</a></p>
+</footer>
 
 <script src="script.js"></script>
 </body>
-                  </html>
+</html>
